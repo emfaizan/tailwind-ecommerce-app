@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="40px" height="40px" viewbox="0 0 40 40" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group-32" transform="translate(0.5 0.5)">
+    <path d="M0 0L27 0L27 27L0 27L0 0Z" transform="matrix(0.70710665 0.7071069 -0.7071069 0.70710665 19.091797 0)" id="Rectangle" fill="none" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
+    <path d="M7.90191 0C6.95368 0 6.0436 0.441417 5.44959 1.13896C4.85559 0.441417 3.9455 0 2.99728 0C1.3188 0 0 1.3188 0 2.99728C0 5.05722 1.85286 6.73569 4.6594 9.2861L5.44959 10L6.23978 9.28065C9.04632 6.73569 10.8992 5.05722 10.8992 2.99728C10.8992 1.3188 9.58038 0 7.90191 0Z" transform="translate(13.641602 14.503326)" id="Shape" fill="#FFDB8A" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
