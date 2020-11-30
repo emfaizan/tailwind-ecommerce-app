@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONTS */
+@font-face {
+    font-family: 'europa-regular';
+    src: url('../assets/fonts/europa-bold-webfont.eot');
+    src: url('../assets/fonts/europa-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/europa-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/europa-bold-webfont.woff') format('woff'),
+         url('../assets/fonts/europa-bold-webfont.ttf') format('truetype'),
+         url('../assets/fonts/europa-bold-webfont.svg#europabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'europa-regular';
+    src: url('../assets/fonts/europa-bolditalic-webfont.eot');
+    src: url('../assets/fonts/europa-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/europa-bolditalic-webfont.woff2') format('woff2'),
+         url('../assets/fonts/europa-bolditalic-webfont.woff') format('woff'),
+         url('../assets/fonts/europa-bolditalic-webfont.ttf') format('truetype'),
+         url('../assets/fonts/europa-bolditalic-webfont.svg#europabolditalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'europa-regular';
+    src: url('../assets/fonts/europa-light-webfont.eot');
+    src: url('../assets/fonts/europa-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/europa-light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/europa-light-webfont.woff') format('woff'),
+         url('../assets/fonts/europa-light-webfont.ttf') format('truetype'),
+         url('../assets/fonts/europa-light-webfont.svg#europalight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'europa-lightitalic';
+    src: url('../assets/fonts/europa-lightitalic-webfont.eot');
+    src: url('../assets/fonts/europa-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/europa-lightitalic-webfont.woff2') format('woff2'),
+         url('../assets/fonts/europa-lightitalic-webfont.woff') format('woff'),
+         url('../assets/fonts/europa-lightitalic-webfont.ttf') format('truetype'),
+         url('../assets/fonts/europa-lightitalic-webfont.svg#europalightitalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'europa-regular';
+    src: url('../assets/fonts/europa-regular-webfont.eot');
+    src: url('../assets/fonts/europa-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/europa-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/europa-regular-webfont.woff') format('woff'),
+         url('../assets/fonts/europa-regular-webfont.ttf') format('truetype'),
+         url('../assets/fonts/europa-regular-webfont.svg#europaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'europa-italic';
+    src: url('../assets/fonts/europa-regularitalic-webfont.eot');
+    src: url('../assets/fonts/europa-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/europa-regularitalic-webfont.woff2') format('woff2'),
+         url('../assets/fonts/europa-regularitalic-webfont.woff') format('woff'),
+         url('../assets/fonts/europa-regularitalic-webfont.ttf') format('truetype'),
+         url('../assets/fonts/europa-regularitalic-webfont.svg#europaitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+html {
+    @apply overflow-x-hidden;
+    font-size:16px;
+}
+
+.main-wrapper {
+    overflow: hidden;
+}
+
+.btn-1 {
+    @apply inline-block cursor-pointer px-6 whitespace-nowrap py-4 bg-secondary text-dark hover:bg-dark hover:text-white relative -top-1 -left-1;
+    transition:all ease 0.3s;
+}
+
+
+.btn-2 {
+    @apply inline-block cursor-pointer px-6 whitespace-nowrap py-4 bg-dark text-secondary hover:bg-secondary hover:text-dark relative -top-1 -left-1;
+    transition:all ease 0.3s;
+}
+
+
+.btn-1:hover, .btn-2:hover {
+    @apply top-0 left-0;
+}
+
+.btn-1:after {
+    content:'';
+    @apply border border-secondary absolute top-1 left-1 -bottom-1 -right-1;
+    transition:all ease 0.3s;
+}
+
+.btn-1:hover:after {
+    @apply inset-0 border-dark;
+}
+
+
+.btn-2:after {
+    content:'';
+    @apply border border-dark absolute top-1 left-1 -bottom-1 -right-1;
+    transition:all ease 0.3s;
+}
+
+.btn-2:hover:after {
+    @apply inset-0 border-secondary
+}
+
+.banner:after {
+    @apply bg-no-repeat absolute bg-left-bottom left-0 right-0 h-24;
+    content:'';
+    bottom:-45px;
+    background-image:url(../assets/images/line-1.svg);
+}
+
+@media (max-width:1000px){
+    .banner:after {
+        @apply bg-right-bottom
+    }
+
+    .bg-none-mobile {
+        background:none !Important;
+    }
+}
+
+
+.heading-border {
+    @apply bg-left-bottom bg-no-repeat;
+    padding-bottom:15px;
+    background-image:url(../assets/images/heading-line.svg);
+}
+
+.border-shadow-dark:after,
+.border-shadow-secondary:after,
+.border-shadow-primary:after {
+    content:'';
+    position: absolute;
+    z-index: -1;
+    top:5px;
+    left:5px;
+    right:-5px;
+    bottom:-5px;
+    border:1px solid #231f20;
+}
+
+.border-shadow-dark:after {
+    border:1px solid #231f20;
+}
+
+.border-shadow-secondary:after {
+    border:1px solid #ffdb8a;
+}
+
+
+
+.border-shadow-primary:after {
+    border:1px solid #d5814c;
+}
+
+
+
+/* MENU ICON */
+
+#nav-icon {
+    width: 26px;
+    height: 14px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  #nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  
+  #nav-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon span:nth-child(2) {
+    top: 12px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -5px;
+    left: 2px;
+  }
+  
+  
+  #nav-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 14px;
+    left: 2px;
+  }
+
+
+
+/* SEARCH RESPONSIVE */
+#search.active .search-box{
+    display:block;
+}
+
+@media (max-width:1024.5px){
+    #search.active .search-box {
+        top: 4rem;
+        left:1rem;
+        right:1rem;
+    }
+}
+
+
+/* DROPDOWN */
+.dropdown-menu:hover .dropdown {
+    display:block;
+}
