@@ -4,5 +4,6 @@ To build css locally:
 `npm run buildcss`
 
 
-Demo Link:
+
+> Demo Link:  
 https://emfaizan.github.io/tailwind-ecommerce-app/
